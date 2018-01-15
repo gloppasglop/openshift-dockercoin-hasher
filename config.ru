@@ -8,7 +8,7 @@ class Application < Sinatra::Base
 
     post '/' do
         # Simulate a bit of delay
-        #sleep 0.1
+        sleep 0.1
         content_type 'text/plain'
         "#{Digest::SHA2.new().update(request.body.read)}"
     end
